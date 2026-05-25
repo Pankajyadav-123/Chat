@@ -1,0 +1,72 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+@import "tailwindcss";
+
+/* Light Mode Variables */
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-tertiary: #f1f5f9;
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --text-tertiary: #94a3b8;
+  --border-color: #e2e8f0;
+  --accent-color: #4f46e5;
+  --accent-light: rgba(79, 70, 229, 0.1);
+}
+
+/* Dark Mode Variables (default) */
+:root[data-theme="dark"],
+:root {
+  color-scheme: dark;
+  --bg-primary: #020617;
+  --bg-secondary: #0f172a;
+  --bg-tertiary: #1e293b;
+  --text-primary: #e2e8f0;
+  --text-secondary: #cbd5e1;
+  --text-tertiary: #94a3b8;
+  --border-color: #334155;
+  --accent-color: #6366f1;
+  --accent-light: rgba(139, 92, 246, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+
+html {
+  min-height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#root {
+  min-height: 100%;
+}
+
+::selection {
+  background: var(--accent-light);
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.24);
+  border-radius: 9999px;
+}
